@@ -1,0 +1,256 @@
+:root {
+    --primary-tomato: hsl(4, 100%, 67%);
+    --lighter-primary-tomato: hsl(4, 100%, 95%);
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+}
+
+@font-face {
+    font-family: roboto-400;
+    src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: roboto-700;
+    src: url(../assets/fonts/Roboto-Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark-slate-grey);
+    font-family: "roboto-400";
+    color: var(--charcoal-grey);
+    font-size: 16px;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+h1 {
+    font-family: "roboto-700";
+    font-size: 3rem;
+    margin-top: 50px;
+}
+
+p {
+    margin-top: 20px;
+}
+
+.sign-up-container {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.left-column-content {
+    padding: 0 40px;
+    max-width: 30rem;
+}
+
+.bullet-top-div {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.bullet-point-div {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.bullet-text {
+    margin-left: 15px;
+}
+
+.email-form {
+    margin-top: 40px;
+}
+
+.email-labels-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.email-label {
+    color: var(--charcoal-grey);
+    font-family: "roboto-700";
+    font-size: -1rem;
+}
+
+.error-message {
+    color: red;
+    display: none;
+    font-family: "roboto-700";
+    font-size: -1rem;
+}
+
+div.visible {
+    display: inline-block;
+}
+
+.visible {
+    display: inline-block;
+}
+
+.hide {
+    display: none;
+}
+
+input[type="email"] {
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--Grey);
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+input[type="email"].email-input-error {
+    background-color: var(--lighter-primary-tomato);
+    border-color: var(--primary-tomato);
+    color: var(--primary-tomato);
+}
+
+.image-container {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.right-column img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.desktop-image {
+    display: block;
+}
+
+.mobile-image {
+    display: none;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--charcoal-grey);
+    font-family: inherit;
+    font-size: inherit;   
+}
+
+button:hover {
+    background-color: var(--primary-tomato);
+}
+
+.subscribed-container {
+    display: none;
+    padding: 40px 60px;
+    max-width: 28rem;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.success-icon-container {
+    height: 50px;
+    width: 50px;
+}
+
+.success-icon-container img {
+    height: 100%;
+    width: 100%;
+}
+
+.thanks-heading {
+    font-family: "roboto-700";
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+.conf-email-address {
+    font-family: "roboto-700";
+}
+
+.dismiss-button {
+    margin-top: 30px;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    body {
+        display: block;
+        padding: 0;
+        background-color: white;
+    }
+
+    .sign-up-container {
+        flex-direction: column;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .left-column {
+        order: 2;
+    }
+
+    .left-column-content {
+        max-width: none;
+    }
+
+    .right-column {
+        order: 1;
+    }
+
+    .image-container {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .desktop-image {
+        display: none;
+    }
+    
+    .mobile-image {
+        display: block;
+    }
+    
+    .newsletter-button {
+        margin-bottom: 40px;
+    }
+
+    .subscribed-container {
+        border-radius: 0;
+        max-width: none;
+        height: 100vh;
+    }
+
+    .subscribed-space-between-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .success-icon-container {
+        margin-top: 50px;
+    }
+
+}
