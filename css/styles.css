@@ -152,13 +152,17 @@ button {
     border: none;
     border-radius: 10px;
     color: white;
-    background-color: var(--charcoal-grey);
     font-family: inherit;
-    font-size: inherit;   
+    font-size: inherit;
+
+    transition: background 0.5s ease-out;
+    background-image: linear-gradient(90deg,#242742 0%,#242742 50%,#ff477e 85%,#ff6a38 100%);
+    background-size: 500%;
+    background-position: left;
 }
 
 button:hover {
-    background-color: var(--primary-tomato);
+    background-position: right;
 }
 
 .subscribed-container {
